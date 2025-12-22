@@ -15,7 +15,7 @@ int main(void)
 		{
 			Rxdata=Serial_GetData();
 			Serial_SendByte(Rxdata);
-			OLED_ShowHexNum(1,6,Serial_GetData(),2);
+			OLED_ShowHexNum(1,6,Rxdata,2);
 		}
 	}
 }
