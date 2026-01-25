@@ -13,6 +13,7 @@ int main(void)
 	{
 		OLED_DrawPoint(sin(x / 128.0 * 2 * 3.14159) * 32 + 32, x);
 	}
+	OLED_ShowNum(32,80,666,3,16);
 	OLED_UpdateScreen();
 	while (1)
 	{
