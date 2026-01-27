@@ -227,7 +227,7 @@ void OLED_ShowImage(uint8_t y, uint8_t x, uint8_t Width, uint8_t Height, const u
 		for (uint8_t i = 0; i < Width; i++)
 		{
 			OLED_Buffer[y / 8+j][x + i] |= Image[j*Width+i] << y % 8;
-			OLED_Buffer[y / 8 + 1+j][x + i] |= Image[j*Width+i] >> 8 - y % 8;
+			OLED_Buffer[y / 8 + 1+j][x + i] |= (Image[j*Width+i] >> 8) - (y % 8);
 		}
 	}
 }
